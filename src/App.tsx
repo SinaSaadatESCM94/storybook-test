@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Input from "./component/input";
 function App() {
+  const [email, setEmail] = useState();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App w-100 vh-100 d-flex align-items-center justify-content-center">
+      <fieldset className="w-25 d-flex align-items-center justify-content-center">
+        <Input
+          inputId="email"
+          inputName="email"
+          // inputValue={email}
+          inputLabel="email"
+          inputType="email"
+          // setValue={setEmail}
+        />
+      </fieldset>
     </div>
   );
 }
